@@ -7,23 +7,27 @@
     <title>GitHub Issues Tracker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
-    
-    <!-- font -->
+
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
-    
+
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- daisy+tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-
     <!-- login page -->
-    <section class="flex justify-center items-center min-h-screen">
+    <section id="login-page" class="flex justify-center items-center min-h-screen">
         <div class="p-8 flex flex-col items-center">
-            <!-- login header  -->
+            login header
             <div class="flex flex-col text-center mb-6">
                 <div class="flex justify-center mb-6"><img src="assets/github-logo.png" alt=""></div>
                 <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
@@ -33,14 +37,14 @@
             <!-- login body -->
             <div class="flex flex-col mb-6 space-y-2.5">
                 <label for="" class="font-semibold">Username</label>
-                <input class="input w-96" type="text" placeholder="Enter Username">
+                <input id="user-name" class="input w-96" type="text" placeholder="Enter Username">
                 <span class="text-fuchsia-900 text-sm font-semibold">Default: admin</span>
                 <label for="" class="font-semibold">Password</label>
-                <input class="input w-96" type="text" placeholder="Enter Password">
+                <input id="password" class="input w-96" type="text" placeholder="Enter Password">
                 <span class="text-fuchsia-900 text-sm font-semibold">Default: admin123</span>
             </div>
 
-            <button class="btn bg-[#622069] text-white text-[16px] w-96">Login with Slack</button>
+            <button id="login-btn" class="btn bg-[#622069] text-white text-[16px] w-96">Login with Slack</button>
             <p class="text-gray-500 text-[16px] font-semibold my-6">OR</p>
 
             <!-- login footer -->
@@ -51,6 +55,27 @@
             </div>
         </div>
     </section>
+
+    <section id="main-page" class="hidden">
+
+        <!-- navigation section -->
+        <div class="justify-between navbar bg-base-100 shadow-sm w-11/12 mx-auto">
+            <div class="flex items-center gap-1">
+                <img class="w-9" src="assets/github-logo.png" alt="">
+                <h2 class="text-2xl font-semibold text-gray-500">GitHub Issues Tracker</h2>
+            </div>
+
+            <div class="flex gap-4">
+                <div class="flex input">
+                    <i class="text-gray-400 fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search issues..." />
+                </div>
+                <button class="btn bg-[#622069] text-white text-[16px]">+ New Issue</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
