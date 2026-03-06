@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Issues Tracker</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/github-logo.png" type="image/x-icon">
     
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- daisy+tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <!-- login page -->
+    <section class="flex justify-center items-center min-h-screen">
+        <div class="p-8 flex flex-col items-center">
+            <!-- login header  -->
+            <div class="flex flex-col text-center mb-6">
+                <div class="flex justify-center mb-6"><img src="assets/github-logo.png" alt=""></div>
+                <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
+                <p class="text-gray-700">Sign in to manage your issues</p>
+            </div>
+
+            <!-- login body -->
+            <div class="flex flex-col mb-6 space-y-2.5">
+                <label for="" class="font-semibold">Username</label>
+                <input class="input w-96" type="text" placeholder="Enter Username">
+                <span class="text-fuchsia-900 text-sm font-semibold">Default: admin</span>
+                <label for="" class="font-semibold">Password</label>
+                <input class="input w-96" type="text" placeholder="Enter Password">
+                <span class="text-fuchsia-900 text-sm font-semibold">Default: admin123</span>
+            </div>
+
+            <button class="btn bg-[#622069] text-white text-[16px] w-96">Login with Slack</button>
+            <p class="text-gray-500 text-[16px] font-semibold my-6">OR</p>
+
+            <!-- login footer -->
+            <div class="">
+                <p class="text-gray-500 text-sm mb-8">Demo Credentials:</p>
+                <p class="font-semibold">Username: <span class="text-gray-500">admin</span></p>
+                <p class="font-semibold">Password: <span class="text-gray-500">admin123</span></p>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
