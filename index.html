@@ -27,7 +27,7 @@
     <!-- login page -->
     <section id="login-page" class="flex justify-center items-center min-h-screen">
         <div class="p-8 flex flex-col items-center">
-            login header
+            <!-- login header -->
             <div class="flex flex-col text-center mb-6">
                 <div class="flex justify-center mb-6"><img src="assets/github-logo.png" alt=""></div>
                 <h2 class="text-2xl font-semibold">GitHub Issues Tracker</h2>
@@ -57,7 +57,7 @@
     </section>
 
     <!-- main section -->
-    <section id="main-page" class="">
+    <section id="main-page" class="bg-[#FBFBFB]">
 
         <!-- navigation section -->
         <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto">
@@ -78,14 +78,14 @@
         <section class="w-10/12 mx-auto">
 
             <!-- toggle button -->
-            <div class="navbar gap-2 bg-base-100 shadow-xl mb-4">
+            <div class="navbar gap-2 bg-base-100 shadow-md mb-4">
                 <button class="btn w-28 btn-primary">All</button>
                 <button class="btn w-28 btn-primary">Open</button>
                 <button class="btn w-28 btn-primary">Closed</button>
             </div>
 
             <!-- issues tracker -->
-            <div class="flex justify-between bg-base-100 shadow-sm mb-6 p-6">
+            <div class="flex justify-between bg-base-100 shadow-xl p-6">
                 <div class="flex items-center gap-2">
                     <div class="p-2.5 bg-sky-100 rounded-full">
                         <img src="assets/Aperture.png" alt="">
@@ -101,6 +101,33 @@
                             class="w-3 h-3 btn-circle bg-sky-800"></span>Open</p>
                     <p class="font-medium text-gray-700 flex gap-2 items-center"><span
                             class="w-3 h-3 btn-circle bg-fuchsia-900"></span>Closed</p>
+                </div>
+            </div>
+
+            <!-- all cards -->
+            <div class="p-6 mb-14 grid grid-cols-4 gap-3">
+                <div class="card bg-base-100 p-4 shadow-2xl space-y-3">
+                    <div class="flex justify-between">
+                        <img src="assets/Open-Status.png" alt="">
+                        <div class="badge badge-soft badge-error">High</div>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold text-slate-800">Fix navigation menu on mobile devices</h2>
+                        <p class="text-[12px] text-gray-800">The navigation menu doesn't collapse properly on mobile
+                            devices...</p>
+                    </div>
+
+                    <div class="flex gap-1">
+                        <div class="text-[12px] font-bold bg-pink-100 badge badge-outline badge-error"><i
+                                class="fa-solid fa-bug"></i>Bug</div>
+                        <div class="text-[12px] font-bold bg-amber-100 badge badge-outline badge-warning"><i
+                                class="fa-regular fa-life-ring"></i>help wanted</div>
+                    </div>
+
+                    <div class="text-gray-500 mt-5">
+                        <p>#1 by john_doe</p>
+                        <p>1/15/2024</p>
+                    </div>
                 </div>
             </div>
 
