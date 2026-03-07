@@ -56,10 +56,11 @@
         </div>
     </section>
 
-    <section id="main-page" class="hidden">
+    <!-- main section -->
+    <section id="main-page" class="">
 
         <!-- navigation section -->
-        <div class="justify-between navbar bg-base-100 shadow-sm w-11/12 mx-auto">
+        <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto">
             <div class="flex items-center gap-1">
                 <img class="w-9" src="assets/github-logo.png" alt="">
                 <h2 class="text-2xl font-semibold text-gray-500">GitHub Issues Tracker</h2>
@@ -73,6 +74,16 @@
                 <button class="btn bg-[#622069] text-white text-[16px]">+ New Issue</button>
             </div>
         </div>
+
+        <section class="w-10/12 mx-auto">
+
+            <!-- toggle button -->
+            <div class="navbar gap-2 bg-base-100 shadow-xl mb-4">
+                <button class="btn w-28 btn-primary">All</button>
+                <button class="btn w-28 btn-primary">Open</button>
+                <button class="btn w-28 btn-primary">Closed</button>
+            </div>
+        </section>
     </section>
 
     <script src="script.js"></script>
