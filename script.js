@@ -4,8 +4,9 @@ const loginPage = document.getElementById("login-page");
 const loginBtn = document.getElementById("login-btn");
 const mainPage = document.getElementById("main-page");
 const issueContainer = document.getElementById("issue-container");
-const issueCount = document.getElementById("issue-count")
-
+const issueCount = document.getElementById("issue-count");
+const toggleBtn = document.querySelectorAll(".toggle-btn");
+const searchInput= document.getElementById("search-input");
 
 // login to issues page
 loginBtn.addEventListener("click", () => {
@@ -29,6 +30,8 @@ async function fetchIssues() {
     allIssues = data.data;
     displayIssues(allIssues)
 };
+
+fetchIssues()
 
 // Convert static card data to dynamic data
 function displayIssues(issues) {
@@ -68,6 +71,10 @@ function displayIssues(issues) {
 
 // geting the card from the api when clicked
 function filterIssues(status) {
+    toggleBtn.forEach((btn) => {
+        btn.classList.remove("btn-primary");
+    })
+    event.target.classList.add("btn-primary")
     if (status === 'all') {
         displayIssues(allIssues);
         issueCount.innerText = `${allIssues.length} Issues`
@@ -78,4 +85,4 @@ function filterIssues(status) {
     }
 }
 
-fetchIssues()
+searchInput.addEventListener("input", async (value)=>{})

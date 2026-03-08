@@ -57,7 +57,7 @@
     </section>
 
     <!-- main section -->
-    <section id="main-page" class="bg-[#FBFBFB] hidden">
+    <section id="main-page" class="bg-[#FBFBFB]">
 
         <!-- navigation section -->
         <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto">
@@ -69,7 +69,7 @@
             <div class="flex gap-4">
                 <div class="flex input">
                     <i class="text-gray-400 fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search issues..." />
+                    <input id="search-input" type="text" placeholder="Search issues..." />
                 </div>
                 <button class="btn bg-[#622069] text-white text-[16px]">+ New Issue</button>
             </div>
@@ -79,9 +79,11 @@
 
             <!-- toggle button -->
             <div class="navbar gap-2 bg-base-100 shadow-md mb-4">
-                <button onclick="filterIssues('all')" class="btn w-28 btn-primary">All</button>
-                <button onclick="filterIssues('open')" class="btn w-28 btn-primary">Open</button>
-                <button onclick="filterIssues('closed')" class="btn w-28 btn-primary">Closed</button>
+                <button onclick="filterIssues('all')"
+                    class="toggle-btn btn w-28 btn-primary border-gray-400 border">All</button>
+                <button onclick="filterIssues('open')" class=" toggle-btn btn w-28 border-gray-400 border">Open</button>
+                <button onclick="filterIssues('closed')"
+                    class=" toggle-btn btn w-28 border-gray-400 border">Closed</button>
             </div>
 
             <!-- issues tracker -->
