@@ -6,7 +6,7 @@ const mainPage = document.getElementById("main-page");
 const issueContainer = document.getElementById("issue-container");
 const issueCount = document.getElementById("issue-count");
 const toggleBtn = document.querySelectorAll(".toggle-btn");
-const searchInput= document.getElementById("search-input");
+const searchInput = document.getElementById("search-input");
 
 // login to issues page
 loginBtn.addEventListener("click", () => {
@@ -42,7 +42,7 @@ function displayIssues(issues) {
         const borderColor = issue.status === 'open' ? 'border-sky-800' : 'border-fuchsia-900';
 
         const card = document.createElement("div");
-        card.classList = `card bg-base-100 p-4 shadow-2xl space-y-3 border-t-2 ${borderColor}`;
+        card.classList = `card bg-base-100 p-4 shadow-2xl space-y-3 border-t-3 ${borderColor}`;
         card.innerHTML = `
                     <div class="flex justify-between">
                         <img src="assets/Open-Status.png" alt="">
@@ -67,7 +67,7 @@ function displayIssues(issues) {
         `
         issueContainer.appendChild(card)
     });
-}
+};
 
 // geting the card from the api when clicked
 function filterIssues(status) {
@@ -83,6 +83,16 @@ function filterIssues(status) {
         displayIssues(filterd);
         issueCount.innerText = `${filterd.length} Issues`
     }
-}
+};
 
-searchInput.addEventListener("input", async (value)=>{})
+// searching the issues
+searchInput.addEventListener("input", async (value) => {
+    const text = value.target.value;
+    if (text.length > 0) {
+        const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${text}`);
+        const data = await res.json();
+        displayIssues(data.data);
+    } else if (text === '') {
+        displayIssues(allIssues);
+    }
+});
