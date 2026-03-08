@@ -1,7 +1,10 @@
+let allIssues = []
+
 const loginPage = document.getElementById("login-page");
 const loginBtn = document.getElementById("login-btn");
 const mainPage = document.getElementById("main-page");
 const issueContainer = document.getElementById("issue-container");
+const issueCount = document.getElementById("issue-count")
 
 
 // login to issues page
@@ -27,8 +30,10 @@ async function fetchIssues() {
     displayIssues(allIssues)
 };
 
-
+// Convert static card data to dynamic data
 function displayIssues(issues) {
+
+    issueContainer.innerHTML = ""
 
     issues.forEach(issue => {
         const borderColor = issue.status === 'open' ? 'border-sky-800' : 'border-fuchsia-900';
@@ -59,6 +64,18 @@ function displayIssues(issues) {
         `
         issueContainer.appendChild(card)
     });
+}
+
+// geting the card from the api when clicked
+function filterIssues(status) {
+    if (status === 'all') {
+        displayIssues(allIssues);
+        issueCount.innerText = `${allIssues.length} Issues`
+    } else {
+        const filterd = allIssues.filter(issue => issue.status === status);
+        displayIssues(filterd);
+        issueCount.innerText = `${filterd.length} Issues`
+    }
 }
 
 fetchIssues()

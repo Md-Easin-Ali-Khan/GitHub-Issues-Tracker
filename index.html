@@ -57,7 +57,7 @@
     </section>
 
     <!-- main section -->
-    <section id="main-page" class="bg-[#FBFBFB]">
+    <section id="main-page" class="bg-[#FBFBFB] hidden">
 
         <!-- navigation section -->
         <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto">
@@ -79,9 +79,9 @@
 
             <!-- toggle button -->
             <div class="navbar gap-2 bg-base-100 shadow-md mb-4">
-                <button class="btn w-28 btn-primary">All</button>
-                <button class="btn w-28 btn-primary">Open</button>
-                <button class="btn w-28 btn-primary">Closed</button>
+                <button onclick="filterIssues('all')" class="btn w-28 btn-primary">All</button>
+                <button onclick="filterIssues('open')" class="btn w-28 btn-primary">Open</button>
+                <button onclick="filterIssues('closed')" class="btn w-28 btn-primary">Closed</button>
             </div>
 
             <!-- issues tracker -->
@@ -91,7 +91,7 @@
                         <img src="assets/Aperture.png" alt="">
                     </div>
                     <div>
-                        <h2 class="text-xl font-semibold">50 Issues</h2>
+                        <h2 id="issue-count" class="text-xl font-semibold">50 Issues</h2>
                         <p class="text-gray-600 font-semibold">Track and manage your project issues</p>
                     </div>
                 </div>
