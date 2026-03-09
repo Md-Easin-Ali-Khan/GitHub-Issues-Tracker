@@ -165,6 +165,7 @@ async function showModal(id) {
     showHideModal.classList.remove("hidden");
 };
 
+// closing the modal
 function closeModal() {
     showHideModal.classList.add("hidden")
 }

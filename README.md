@@ -1,129 +1,53 @@
-# 🌟 Welcome To (সহজ সরল সিম্পল) Assignment - 5
+১. What is the difference between var, let, and const? :
+----------------------------------------------------------------
+var(global scope) :
+--------------------------
+var একটা কিওয়ার্ড (variable)ডিকলার করার জন্য var সাধারনত ব্যবহার করা হয়না। কারন এটা  গ্লোবাল, হইসটিং হয়। এর বিকল্প হিসেবে সাজেস্ট করা হয় let, const ব্যবহার করতে
 
-# **📅 Deadline For 60 marks:** 9th March, 2026 (11:59 pm ⏱️)  
-#  📅 No Deadline For 50 marks  
-# **📅 Deadline For 30 marks:** Any time after 9th March.
+let(local scope) :
+-------------------------
+let এর সাহায্যেও (variable)ডিকলার করা হয়। let এসাইন করে বার বার এর ভেলু চেন্জ করা যায়, কিন্তু কোনো স্কোপে ডিকলার করলে উক্ত স্কোপ ছাড়া আর কোথাও ব্যবহার কারা যায়না (local scope)
 
----
-
-# Assignment-05: GitHub Issues Tracker
-
-
-### **API Endpoints:**
-###  **All Issues:** 
-  - https://phi-lab-server.vercel.app/api/v1/lab/issues 
-
-
-###  **Single Issue:**
-   - https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}
-
-   - Example: https://phi-lab-server.vercel.app/api/v1/lab/issue/33
+const(local scope) :
+-------------------------
+const এর সাহায্যেও (variable)ডিকলার করা হয়। const এর ভেলু চেন্জ করা যায়না, কোনো স্কোপে ডিকলার করলে উক্ত স্কোপ ছাড়া আর কোথাও ব্যবহার কারা যায়না (local scope)।
 
 
-###  **Search Issue:** https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q={searchText}
 
-   - Example:  https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=notifications
-
-
----
-
-## 📝 Main Requirements
-
-## 🎨 Design Part
-
-## Login Page
-- Create a login page containing a logo, title, and sub-title
-- Below that, there will be 2 inputs, a sign-in button, and a demo credential to sign in. Follow the Figma for this page 
-- Styled as per Figma
-
-## Main Page: 
-
-### Navbar: 
-
-- Navbar with website logo/name on the left
-- Search input and button on the right
-
-### Tab Section like Figma: 
-
-- 3 tab ( All, Open, Closed) at the top of this section.(**All**, **Open**, **Closed**)
-
-- Below the tab, there will be an icon, the issue count, some text on the left, and an open and closed marker on the right
-
-- Responsiveness: The website should be responsive for mobile devices. It is totally up to you. 
+২. What is the spread operator (...)? :
+---------------------------------------
+spread operator সাধারনত ফংশনে ব্যবহার করা হয়। ফংশন কলে একাধিক আর্গুমেন্ট পাস করলে, পেরামিটারে অতিরিক্ত আর্গুমেন্টগুলো spread operator রিসিভ করে নেয়।
 
 
---- 
+
+৩. What is the difference between map(), filter(), and forEach()?
+------------------------------------------------------------------------
+map() :
+----------
+উক্ত মেথডটি ব্যবহার করে এরে এর উপাদান গুলোতে নির্দিষ্ট কোনো কাজ পারফর্ম করা হয়, এবং কাজ সম্পন্য হলে এরেটি রিটার্ন করা হয়।
+
+filter()
+--------------
+একটা নির্দিষ্ট কন্ডিশনের উপর ভিত্তি করে এরে থেকে উপাদান নেওয়া হয়, উক্ত এরেদিয়ে নির্দিষ্ট কিছু কাজ করে উক্ত এরেটি রিটার্ন করা হয়।
+
+forEach()
+----------------
+এই মেথডটি সাধারনত এরেকে প্রিন্ট করার ক্ষেত্রে ব্যবহার করা হয়।
 
 
-## ⚙️ Functionalities
-- In login page, there will be default admin credentials (username, password). You need to sign in using these credentials.
 
-- Load all issues and display as per Figma
-
-- On clicking on an open or closed tab, it will load the issues data of the related tab and show it in a display-like card in a 4-column layout like Figma. By default, it will show all data 
-
-- Each card shows:
-  - Title
-  - Description
-  - Status
-  - Category
-  - Author
-  - Priority
-  - Label
-  - CreatedAt
-- Clicking on a tree name in a card will open a modal and show all the information about that Issue. 
-
-### 🚀 Challenges
+৪. What is an arrow function?
+ ------------------------------------------
+arrow function সাধারনত map(), filter(), and forEach() এ ব্যবহার করা হয়।
 
 
-- Show the card Top border based on their category(open, closed), open card will have Green Boder, closed card will have a purple border on top. 
 
-- Loading spinner on data load
-
-- Show active button on changing category names
-
-- Implement Search Functionality and 8 meaningful github commit.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-    - 1️⃣ What is the difference between var, let, and const?
-    - 2️⃣ What is the spread operator (...)?
-    - 3️⃣ What is the difference between map(), filter(), and forEach()?
-    - 4️⃣ What is an arrow function?
-    - 5️⃣ What are template literals?
+৫. What is template literals?
+---------------------------------------------
+বেকটিক(``) এর ভেতরে ${} ব্যবহার করে variable এর ভেলু , এরিথমেটিক্স কাজ পারফর্ম করা যায় 
 
 
----
-
-## 🛠️ Technology Stack
-
-- **HTML**
-- **CSS** (Vanilla/Tailwind/DaisyUI)
-- **JavaScript** (Vanilla)
-
----
-
-## 🔑 Demo Credentials
-
-```text
-Username: admin
-Password: admin123
-```
 
 
----
-
-### Optional: 
- - No need to show status: Open, Closed styles On modals. 
- - No Need to show icon on labels 
- - No need to apply styles on Priority 
---- 
-
-
-## 📤 What to submit
-
-- **GitHub Repository Link:**
-- **Live Site Link:**
-
----
 
 
