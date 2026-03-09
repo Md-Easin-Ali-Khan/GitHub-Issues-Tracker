@@ -37,10 +37,10 @@
             <!-- login body -->
             <div class="flex flex-col mb-6 space-y-2.5">
                 <label for="" class="font-semibold">Username</label>
-                <input id="user-name" class="input w-96" type="text" placeholder="Enter Username">
+                <input id="user-name" value="admin" class="input w-96" type="text" placeholder="Enter Username">
                 <span class="text-fuchsia-900 text-sm font-semibold">Default: admin</span>
                 <label for="" class="font-semibold">Password</label>
-                <input id="password" class="input w-96" type="text" placeholder="Enter Password">
+                <input id="password" value="admin123" class="input w-96" type="text" placeholder="Enter Password">
                 <span class="text-fuchsia-900 text-sm font-semibold">Default: admin123</span>
             </div>
 
@@ -57,10 +57,10 @@
     </section>
 
     <!-- main section -->
-    <section id="main-page" class="bg-[#FBFBFB]">
+    <section id="main-page" class="bg-[#FBFBFB] hidden">
 
         <!-- navigation section -->
-        <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto">
+        <div class="navbar justify-between mb-14 bg-base-100 shadow-2xl w-11/12 mx-auto sticky top-0">
             <div class="flex items-center gap-1">
                 <img class="w-9" src="assets/github-logo.png" alt="">
                 <h2 class="text-2xl font-semibold text-gray-500">GitHub Issues Tracker</h2>
@@ -78,10 +78,11 @@
         <section class="w-10/12 mx-auto">
             <!-- toggle button -->
             <div class="navbar gap-2 bg-base-100 shadow-md mb-4">
-                <button onclick="filterIssues('all')"
+                <button onclick="filterIssues('all', event)"
                     class="toggle-btn btn w-28 btn-primary border-gray-300 border">All</button>
-                <button onclick="filterIssues('open')" class=" toggle-btn btn w-28 border-gray-300 border">Open</button>
-                <button onclick="filterIssues('closed')"
+                <button onclick="filterIssues('open', event)"
+                    class=" toggle-btn btn w-28 border-gray-300 border">Open</button>
+                <button onclick="filterIssues('closed', event)"
                     class=" toggle-btn btn w-28 border-gray-300 border">Closed</button>
             </div>
 
@@ -109,9 +110,16 @@
             <div id="issue-container" class="p-6 mb-14 grid grid-cols-4 gap-3">
             </div>
 
+            <!-- modal section -->
+            <div id="show-hide-modal" class="fixed inset-0 bg-[#00A96E]/30 flex items-center justify-center hidden">
+
+                <!-- modal container -->
+                <div id="modal-content" class="space-y-6 bg-white p-6 rounded-lg w-[700px]">
+
+                </div>
+            </div>
         </section>
     </section>
-
     <script src="script.js"></script>
 </body>
 
