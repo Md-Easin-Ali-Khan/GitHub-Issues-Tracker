@@ -9,6 +9,7 @@ const toggleBtn = document.querySelectorAll(".toggle-btn");
 const searchInput = document.getElementById("search-input");
 const modalContent = document.getElementById("modal-content");
 const showHideModal = document.getElementById("show-hide-modal")
+const loadingSpinner = document.getElementById("loading-spinner")
 
 // login to issues page
 loginBtn.addEventListener("click", () => {
@@ -25,10 +26,21 @@ loginBtn.addEventListener("click", () => {
 
 })
 
+// showing loading spinner
+function showLoadingSpinner() {
+    loadingSpinner.classList.remove("hidden")
+}
+// removing the loadingSpinner
+function removeLoadingSpinner() {
+    loadingSpinner.classList.add("hidden")
+}
+
 // fetching all issues
 async function fetchIssues() {
+    showLoadingSpinner()
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
     const data = await res.json();
+    removeLoadingSpinner()
     allIssues = data.data;
     displayIssues(allIssues)
 };
